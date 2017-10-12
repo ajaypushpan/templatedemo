@@ -1,0 +1,57 @@
+@mixin primary-button-dark-color{
+    border-color: $white-color;
+    color: $white-color;
+}
+
+@mixin primary-button-light-color {
+  border-color: $primary-color;
+  color: $primary-color;
+}
+
+@mixin button-property{
+  height: 40px;
+  border: 2px solid;
+  border-radius: 20px;
+  font-size: rem(16px);
+  font-family: $link-font;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: none !important;
+  transition: all ease-in-out .3s;
+}
+@mixin primary-button-dark {
+  @include primary-button-dark-color;
+  @include button-property;
+}
+
+@mixin primary-button-dark-hover {
+  background: $white-color;
+  border-color: $white-color;
+  color: $font-color;
+}
+
+@mixin primary-button-light {
+  @include primary-button-light-color;
+  @include button-property;
+}
+
+@mixin primary-button-light-hover {
+  background: $primary-color;
+  border-color: $primary-color;
+  color: $white-color;
+}
+
+@mixin shadowed-button {
+  @include primary-button-light-color;
+  height: 40px;
+  border: 2px solid;
+  border-radius: 20px;
+  font-size: rem(16px);
+  font-family: $link-font;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 6px 20px rgba(11,41,221,0.1);
+  transition: all ease-in-out .3s;
+}

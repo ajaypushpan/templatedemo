@@ -1,0 +1,22 @@
+// ============= GOOGLE FONT IMPORT ===========
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Neuton:200,300,400,400i,700,800');
+$montserrat : 'Montserrat';
+$neuton: 'Neuton';
+
+// ==================== COLORS =================
+$primary-color: #0b29dd;
+$primary-color-alpha: rgba(11,41,221, 0.8);
+$secondary-color: #01051a;
+$bg-color: #fff;
+$font-color: #020726;
+$font-color-black-bg: $bg-color;
+$main-footer: #171717;
+$footer-bottom: #000;
+$white-color: $bg-color;
+
+// =================== FONTS ===================
+$headline-font: $montserrat ,sans-serif;
+$text-font: $neuton, serif;
+$link-font: $text-font;
+
+// ================ FONT SIZES =================

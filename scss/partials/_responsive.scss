@@ -1,0 +1,63 @@
+// ==============Responsive Mixins
+/* Extra Large Devices */
+@mixin ex-large-devices() {
+  @media screen and (min-width: 1619px) {
+    @content;
+  }
+}
+
+/* Large Devices (Desktop & Laptops) */
+@mixin large-devices() {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+/* Medium Devices (Landscape Tablets & Medium Desktops) */
+@mixin medium-devices() {
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+/* Small Devices (Portrait Tablets & Small Desktops) */
+@mixin small-devices() {
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+/* Extra Small Devices (Landscape Phones & Portrait Tablets) */
+@mixin extra-small-devices() {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+/* Very Small Devices (Smaller Devices) */
+@mixin very-small-devices() {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+/* Tiny Screen Devices */
+@mixin tiny-devices() {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+/* bug fix on 530px to 575px */
+@mixin bug-fixed-condition {
+  @media screen and (min-width: 530px) and (max-width: 575px) {
+    @content;
+  }
+}
+
+/* bug fix on 480px to 575px */
+@mixin bug-fixed-condition2 {
+  @media screen and (min-width: 480px) and (max-width: 575px) {
+    @content;
+  }
+}

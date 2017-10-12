@@ -1,0 +1,13 @@
+@mixin line-divider1 {
+  width: rem(100px);
+  height: rem(2.5px);
+  background: $primary-color;
+  position: relative;
+}
+
+@mixin line-divider2{
+  width: 150px;
+  height: 2.5px;
+  background: $primary-color;
+  position: relative;
+}

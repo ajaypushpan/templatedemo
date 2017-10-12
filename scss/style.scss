@@ -1,0 +1,818 @@
+@import "partials/functions";
+@import "partials/variables";
+@import "partials/button";
+@import "partials/navigation";
+@import "partials/dividers";
+@import "partials/typography";
+@import "partials/section-heading";
+@import "partials/responsive";
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headline-font;
+}
+
+a {
+  font-family: $link-font;
+  color: $font-color;
+}
+// ========== Navigation
+
+.navbar {
+  box-shadow: 0 1px 5px rgba(2,7,38,0.24);
+
+  .navbar-toggler {
+    @include nav-toggler;
+  }
+
+  .navbar-toggler-icon {
+    @include toggler-icon;
+  }
+
+  .navbar-brand {
+    transform: translateX(-50%);
+    top: 5px;
+    left: 50%;
+    position: absolute;
+    font-size: rem(25px);
+    font-family: $headline-font;
+    text-transform: uppercase;
+    border: 3px solid $font-color;
+    color: $font-color;
+    @include small-devices {
+      transform: translateX(-25%);
+      left: 15%;
+      font-size: rem(21px);
+    }
+    @include extra-small-devices {
+      transform: translateX(-10%);
+      left: 15%;
+      font-size: rem(21px);
+    }
+    @include very-small-devices {
+      transform: translateX(-5%);
+      left: 10%;
+      font-size: rem(21px);
+    }
+
+    &:hover {
+      border-color: $font-color;
+      color: $font-color;
+    }
+  }
+
+  .navbar-nav {
+    li {
+      > a {
+        font-weight: 400;
+        text-transform: uppercase;
+        @include link;
+      }
+    }
+  }
+}
+
+// ========== Home Section
+
+#home {
+  width: 100%;
+  height: 95vh;
+  background-image: url('../img/home-cover.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+  &:after {
+    content: url('../img/home-cover-footer.svg');
+    position: relative;
+    top: -288px;
+    left: -300px;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    @include ex-large-devices {
+      left: 0;
+    }
+    @include medium-devices {
+      left: -400px;
+    }
+    @include small-devices {
+      left: -500px;
+    }
+    @include extra-small-devices {
+      left: -600px;
+    }
+    @include tiny-devices {
+      left: -700px;
+    }
+  }
+
+  .big-head-text {
+    font-family: $headline-font;
+    color: $white-color;
+    text-transform: uppercase;
+    font-size: rem(32px);
+    margin-bottom: 30px;
+    @include medium-devices {
+      font-size: rem(32px);
+    }
+    @include small-devices {
+      font-size: rem(28px);
+    }
+    @include extra-small-devices {
+      font-size: rem(28px);
+    }
+    @include very-small-devices {
+      font-size: rem(24px);
+    }
+    @include tiny-devices {
+      font-size: rem(24px);
+    }
+  }
+
+  #typed,
+  .typed-cursor {
+    font-family: $headline-font;
+    color: $white-color;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: rem(48px);
+    display: inline;
+    @include medium-devices {
+      font-size: rem(36px);
+    }
+    @include small-devices {
+      font-size: rem(32px);
+    }
+    @include extra-small-devices {
+      font-size: rem(32px);
+    }
+    @include very-small-devices {
+      font-size: rem(28px);
+    }
+    @include tiny-devices {
+      font-size: rem(28px);
+    }
+  }
+
+  .typed-cursor {
+    color: $primary-color;
+  }
+
+  .blue-text {
+    color: $primary-color;
+  }
+
+  #header-btn {
+    margin-top: 30px;
+  }
+
+  .button-primary {
+    width: 160px;
+    @include primary-button-dark;
+
+    &:hover {
+      @include primary-button-dark-hover;
+    }
+  }
+}
+// ============Service Section
+
+#services {
+  width: 100%;
+  @include headline-content;
+
+  .card-box {
+    border: none;
+    border-radius: 0;
+    top: 0;
+    transition: all ease-in-out 0.5s;
+
+    &:hover {
+      top: -5px;
+      box-shadow: 0 1px 20px rgba(0,0,0,0.1), 0 1px 20px rgba(0,0,0,0.1);
+    }
+  }
+
+  p {
+    @include text-property;
+  }
+
+  .fa {
+    font-size: rem(22px);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $primary-color;
+    padding: 15px 0;
+  }
+
+  .card-subheading {
+    @include sub-heading-section;
+  }
+
+  .line-break {
+    width: 50px;
+    height: 3px;
+    background: $primary-color;
+  }
+}
+// ===========Event Section
+
+#events {
+  background: url('../img/event-cover.jpg') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .dark-overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.9);
+  }
+
+  .event-box {
+    border: none;
+    border-radius: 0;
+    border-top: 5px solid $primary-color;
+    top: 0;
+    transition: all ease-in-out.5s;
+    @include extra-small-devices {
+      margin-bottom: 50px;
+    }
+    @include very-small-devices {
+      margin-bottom: 50px;
+    }
+    @include tiny-devices {
+      margin-bottom: 50px;
+    }
+
+    &:hover {
+      top: -5px;
+    }
+  }
+
+  .event-date {
+    @include event-heading;
+  }
+
+  .event-type {
+    @include event-sub-heading;
+  }
+
+  .event-time {
+    @include event-sub-text;
+  }
+
+  .event-line-break {
+    @include line-divider2;
+  }
+
+  .btn-event {
+    width: 100px;
+    @include shadowed-button;
+
+    &:hover {
+      @include primary-button-light-hover;
+      box-shadow: 0 6px 20px rgba(11,41,221,0.5);
+    }
+  }
+}
+// =============Features Section
+
+#features {
+  @include headline-content;
+
+  .card {
+    border-radius: 0;
+  }
+
+  .card-header {
+    border-radius: 0;
+    border-left: 10px solid $primary-color;
+    box-shadow: 0 0 0 rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1);
+  }
+
+  .card-heading {
+    @include sub-heading-section;
+  }
+
+  .fa {
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .card-body {
+    border-bottom: 0;
+  }
+}
+// =============Newsletter Section
+
+#newsletter {
+  width: 100%;
+  background: $secondary-color;
+
+  .newsletter-heading {
+    @include event-heading;
+  }
+
+  .newsletter-input {
+    @include extra-small-devices {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    @include very-small-devices {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .input-group-addon {
+    border: none;
+    border-radius: 0;
+    background: $primary-color;
+  }
+
+  .form-control {
+    border-radius: 0;
+    border: none;
+  }
+
+  .fa {
+    color: $white-color;
+  }
+
+  .subscribe-btn {
+    height: 40px;
+    border-radius: 20px;
+    background: $primary-color;
+    text-transform: uppercase;
+    font-family: $text-font;
+    font-weight: 400;
+    font-size: rem(22px);
+    padding-top: 5px;
+    color: $white-color;
+    box-shadow: none !important;
+  }
+}
+// ===============Portfolio Section
+
+#portfolio {
+  @include headline-content;
+
+  .image-box {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image-icon-box {
+    width: 100%;
+    height: 100%;
+    background: $primary-color-alpha;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(.7);
+    transform: rotate(-60deg);
+    opacity: 0;
+    transition: all ease-in-out 1s;
+    @include bug-fixed-condition {
+      top: -5px;
+      left: -20px;
+    }
+
+    &:hover {
+      transform: scale(.9);
+      opacity: 1;
+    }
+
+    .fa {
+      font-size: rem(36px);
+      position: absolute;
+      top: 40%;
+      left: 40%;
+      color: $white-color;
+      border: 5px solid $white-color;
+      padding: 15px 20px;
+      opacity: 1;
+      transition: all ease-in-out 0.1s;
+      @include tiny-devices {
+        top: 35%;
+        left: 35%;
+      }
+    }
+  }
+}
+// ===============Stats Section
+
+#stats {
+  background: url('../img/stat-cover.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  @extend .dark-overlay;
+
+  h3 {
+    font-size: rem(42px);
+  }
+
+  p {
+    font-family: $headline-font;
+    font-size: rem(16px);
+    text-transform: uppercase;
+  }
+
+  .fa {
+    font-size: rem(36px);
+    color: $primary-color;
+  }
+}
+// ================Blog sub-heading-section
+
+#blog {
+  @include headline-content;
+
+  .blog-card {
+    @include extra-small-devices {
+      margin-bottom: 50px;
+    }
+    @include very-small-devices {
+      margin-bottom: 50px;
+    }
+    @include tiny-devices {
+      margin-bottom: 50px;
+    }
+  }
+
+  img {
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: filter ease-in-out 0.4s;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+
+  .blog-heading {
+    a {
+      @include blog-title;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .blog-content {
+    @include text-property;
+  }
+
+  .blog-btn {
+    width: 160px;
+    @include shadowed-button;
+
+    &:hover {
+      @include primary-button-light-hover;
+      box-shadow: 0 6px 20px rgba(11,41,221,0.5);
+    }
+  }
+}
+// ===============Testimonial sub-heading-section
+
+#testimonial {
+  background: url('../img/testimonial-cover.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+
+  .bq-main-content {
+    font-family: $text-font;
+    letter-spacing: rem(1px);
+    font-size: rem(18px);
+    font-weight: 400;
+    @include extra-small-devices {
+      font-size: rem(16px);
+    }
+    @include very-small-devices {
+      font-size: rem(14px);
+    }
+    @include tiny-devices {
+      font-size: rem(14px);
+    }
+  }
+
+  .bq-main-content {
+    &:after,
+    &:before {
+      font-size: rem(68px);
+      line-height: 1px;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      @include extra-small-devices {
+        font-size: rem(42px);
+      }
+      @include very-small-devices {
+        font-size: rem(42px);
+      }
+      @include tiny-devices {
+        font-size: rem(42px);
+      }
+    }
+
+    &:before {
+      content: '\201C';
+      top: 60px;
+      left: 50px;
+      @include extra-small-devices {
+        top: 60px;
+        left: 60px;
+      }
+      @include very-small-devices {
+        top: 60px;
+        left: 50px;
+      }
+      @include tiny-devices {
+        top: 60px;
+        left: 50px;
+      }
+    }
+
+    &:after {
+      content: '\201D';
+      bottom: 80px;
+      right: -380px;
+      @include extra-small-devices {
+        bottom: 80px;
+        right: -230px;
+      }
+      @include very-small-devices {
+        bottom: 70px;
+        right: -230px;
+      }
+      @include tiny-devices {
+        bottom: 80px;
+        right: -380px;
+      }
+    }
+  }
+
+  .bq-sub-content {
+    border-left: 3px solid $white-color;
+  }
+}
+// =================Team Section
+
+#team {
+  @include headline-content;
+
+  .team-box {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    @include bug-fixed-condition2 {
+      padding-bottom: 30px;
+    }
+
+    &:hover {
+      .content {
+        transform: translate(255px, 255px) rotate(360deg);
+        opacity: 1;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .content {
+      position: absolute;
+      top: -255px;
+      left: -255px;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background: $primary-color-alpha;
+      transition: transform ease-in-out 1.5s;
+      @include bug-fixed-condition2 {
+        top: -285px;
+      }
+    }
+
+    .team-content-box {
+      position: relative;
+      top: 0;
+      left: 0;
+      color: $white-color;
+    }
+
+    .team-mem-name {
+      font-family: $headline-font;
+      font-size: rem(22px);
+      text-transform: uppercase;
+    }
+
+    .team-mem-pos {
+      font-family: $headline-font;
+      font-size: rem(14px);
+      text-transform: uppercase;
+    }
+
+    .team-mem-social {
+      padding-top: 40px;
+      @include medium-devices {
+        padding-top: 40px;
+      }
+      @include small-devices {
+        padding-top: 80px;
+      }
+      @include extra-small-devices {
+        padding-top: 40px;
+      }
+      @include very-small-devices {
+        padding-top: 120px;
+      }
+      @include tiny-devices {
+        padding-top: 20px;
+      }
+      @include bug-fixed-condition2 {
+        padding-top: 200px;
+      }
+    }
+
+    .fa {
+      font-size: rem(22px);
+      color: $white-color;
+      transform: scale(1);
+      transition: transform ease-in-out 0.8s;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+// ===================Client Section
+
+#client {
+  background: url('../img/client-cover.jpg') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+
+  img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+// =================Main Footer Section
+
+#contact {
+  background: $main-footer;
+  @include very-small-devices {
+    text-align: center;
+  }
+  @include tiny-devices {
+    text-align: center;
+  }
+  @include bug-fixed-condition2 {
+    text-align: center;
+  }
+
+  .section-heading {
+    @include event-heading;
+    padding-bottom: 30px;
+  }
+
+  p {
+    font-family: $text-font;
+    font-weight: 400;
+  }
+
+  .about-sub-content {
+    padding-top: 20px;
+  }
+
+  .info-head {
+    font-family: $headline-font;
+    font-size: rem(22px);
+  }
+
+  a {
+    text-decoration: none;
+
+    .fa {
+      color: $white-color;
+      font-size: rem(18px);
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .contact-heading {
+    @include very-small-devices {
+      text-align: center;
+      padding-top: 40px;
+    }
+    @include tiny-devices {
+      text-align: center;
+      padding-top: 40px;
+    }
+    @include bug-fixed-condition2 {
+      text-align: center;
+      padding-top: 40px;
+    }
+  }
+
+  .form-group {
+    padding: 5px 0;
+  }
+
+  input[type],
+  textarea {
+    color: $white-color;
+  }
+
+  .form-control {
+    background-color: rgba(255,255,255, 0);
+    border-radius: 0;
+    border: 1px solid $white-color;
+  }
+
+  .btn-contact {
+    background: $primary-color;
+    border-radius: 0;
+    text-transform: uppercase;
+    color: $white-color;
+    font-family: $text-font;
+    font-size: rem(18px);
+  }
+}
+// ================Bottom Footer Section
+
+.bottom-footer {
+  background: $footer-bottom;
+
+  p {
+    font-family: $text-font;
+    color: $white-color;
+    word-spacing: 2px;
+    @include very-small-devices {
+      text-align: center;
+    }
+    @include tiny-devices {
+      text-align: center;
+    }
+    @include bug-fixed-condition2 {
+      text-align: center;
+    }
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+// ================Fixed Scroll Navigation button-primary
+
+#back-to-top {
+  position: fixed;
+  bottom: 14px;
+  right: 20px;
+  font-size: rem(22px);
+}
+
+.btn-top {
+  color: $primary-color;
+  border: 2px solid $primary-color;
+  border-radius: 0;
+  box-shadow: none !important;
+
+  &:hover, &:focus {
+    color: $white-color;
+    background: $primary-color;
+  }
+}

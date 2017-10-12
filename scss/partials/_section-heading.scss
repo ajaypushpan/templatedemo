@@ -1,0 +1,18 @@
+@mixin headline-content {
+.section-heading {
+  @include heading-section;
+}
+.divider1 {
+  @include line-divider1;
+  top: -3px;
+}
+
+.divider2 {
+  @include line-divider2;
+}
+
+.divider3 {
+  @include line-divider1;
+  top: 3px;
+}
+}

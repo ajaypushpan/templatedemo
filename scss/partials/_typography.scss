@@ -1,0 +1,119 @@
+@mixin heading-section {
+  font-family: $headline-font;
+  font-size: rem(38px);
+  @include medium-devices{
+    font-size: rem(32px);
+  }
+  @include small-devices{
+    font-size: rem(32px);
+  }
+  @include extra-small-devices{
+    font-size: rem(32px);
+  }
+  @include very-small-devices{
+    font-size: rem(28px);
+  }
+  @include tiny-devices{
+    font-size: rem(28px);
+  }
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: rem(2px);
+  color: $font-color;
+}
+
+@mixin sub-heading-section {
+  font-family: $headline-font;
+  font-size: rem(22px);
+  @include medium-devices{
+    font-size: rem(18px);
+  }
+  @include small-devices{
+    font-size: rem(18px);
+  }
+  @include extra-small-devices{
+    font-size: rem(16px);
+  }
+  @include very-small-devices{
+    font-size: rem(16px);
+  }
+  @include tiny-devices{
+    font-size: rem(16px);
+  }
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: rem(1px);
+  color: $font-color;
+}
+
+@mixin text-property{
+  font-family: $text-font;
+  font-size: rem(16px);
+  font-weight: 400;
+  letter-spacing: rem(1px);
+  color: $font-color;
+}
+
+@mixin event-heading {
+  font-family: $headline-font;
+  font-size: rem(28px);
+  @include medium-devices{
+    font-size: rem(24px);
+  }
+  @include small-devices{
+    font-size: rem(24px);
+  }
+  @include extra-small-devices{
+    font-size: rem(22px);
+  }
+  @include very-small-devices{
+    font-size: rem(22px);
+  }
+  @include tiny-devices{
+    font-size: rem(22px);
+  }
+  font-weight: 500;
+  color: $font-color;
+  text-transform: uppercase;
+}
+
+@mixin event-sub-heading {
+  font-family: $headline-font;
+  font-size: rem(18px);
+  @include medium-devices{
+    font-size: rem(18px);
+  }
+  @include small-devices{
+    font-size: rem(18px);
+  }
+  @include extra-small-devices{
+    font-size: rem(18px);
+  }
+  @include very-small-devices{
+    font-size: rem(16px);
+  }
+  @include tiny-devices{
+    font-size: rem(16px);
+  }
+  font-weight: 500;
+  color: $font-color;
+  text-transform: uppercase;
+}
+
+@mixin event-sub-text {
+  font-family: $headline-font;
+  font-size: rem(14px);
+  @include very-small-devices{
+    font-size: rem(12px);
+  }
+  @include tiny-devices{
+    font-size: rem(12px);
+  }
+  font-weight: 500;
+  color: $font-color;
+  text-transform: uppercase;
+}
+
+@mixin blog-title {
+  @include sub-heading-section;
+}
